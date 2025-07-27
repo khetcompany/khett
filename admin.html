@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>CMS </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f8fafd;
+      color: #222;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 32px 0 #f8bfc955, 0 1.5px 6px 0 #ffe0b2cc;
+      padding: 40px 32px 32px 32px;
+      max-width: 520px;
+      width: 100%;
+      margin: 40px 0;
+    }
+    h1 {
+      font-size: 28px;
+      color: #c1003b;
+      font-weight: 800;
+      margin-bottom: 18px;
+      letter-spacing: -1px;
+    }
+    #title {
+      background: #f8fafd;
+      border: 1.5px solid #f8bfc9;
+      font-size: 22px;
+      color: #c1003b;
+      width: 100%;
+      outline: none;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-weight: 600;
+      transition: border 0.2s;
+    }
+    #title:focus {
+      border: 1.5px solid #e5738a;
+      background: #fff0f4;
+    }
+    .upload-box {
+      background: #fff0f4;
+      border: 2px dashed #f8bfc9;
+      padding: 32px 10px 18px 10px;
+      text-align: center;
+      margin-bottom: 18px;
+      color: #c1003b;
+      position: relative;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px #f8bfc933;
+      transition: border 0.2s;
+    }
+    .upload-box:hover {
+      border: 2px solid #e5738a;
+      background: #fff6fa;
+    }
+    .upload-box input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      left: 0;
+      top: 0;
+      cursor: pointer;
+    }
+    #preview-img {
+      max-height: 90px;
+      margin-top: 10px;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px #f8bfc933;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #editor {
+      background: #fff;
+      color: #222;
+      height: 260px;
+      border-radius: 8px;
+      border: 1.5px solid #f8bfc9;
+      margin-bottom: 8px;
+      box-shadow: 0 2px 8px #f8bfc933;
+    }
+    .toolbar {
+      margin-bottom: 8px;
+    }
+    .actions {
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn {
+      background: linear-gradient(90deg, #f8bfc9 0%, #ffe0b2 100%);
+      color: #c1003b;
+      padding: 10px 28px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 16px;
+      margin-left: 8px;
+      box-shadow: 0 2px 8px #f8bfc933;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover {
+      background: linear-gradient(90deg, #ffe0b2 0%, #f8bfc9 100%);
+      color: #e5738a;
+      box-shadow: 0 4px 16px #f8bfc955;
+    }
+    #wordCount {
+      font-size: 14px;
+      color: #e5738a;
+      font-weight: 600;
+    }
+    .github-token-box {
+      margin-bottom: 18px;
+      padding: 14px 16px 10px 16px;
+      background: #fff0f4;
+      border-radius: 8px;
+      border: 1.5px solid #f8bfc9;
+      box-shadow: 0 2px 8px #f8bfc933;
+    }
+    .github-token-box label {
+      color: #c1003b;
+      font-weight: 600;
+      margin-bottom: 4px;
+      display: block;
+    }
+    .github-token-box input {
+      width: 100%;
+      padding: 8px 12px;
+      background: #f8fafd;
+      border: 1.5px solid #f8bfc9;
+      color: #c1003b;
+      border-radius: 6px;
+      margin-bottom: 4px;
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      transition: border 0.2s;
+    }
+    .github-token-box input:focus {
+      border: 1.5px solid #e5738a;
+      background: #fff0f4;
+    }
+    .github-token-box small {
+      color: #e5738a;
+      font-size: 12px;
+    }
+    /* Toast notification */
+    .toast {
+      position: fixed;
+      top: 32px;
+      right: 32px;
+      background: #fff0f4;
+      color: #c1003b;
+      padding: 16px 28px;
+      border-radius: 8px;
+      box-shadow: 0 2px 16px #f8bfc955;
+      font-weight: 700;
+      font-size: 16px;
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, top 0.3s;
+    }
+    .toast.show {
+      opacity: 1;
+      pointer-events: auto;
+      top: 48px;
+    }
+    /* Preview style giống card bài */
+    .preview-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px #f8bfc955;
+      padding: 32px 24px;
+      max-width: 600px;
+      margin: 32px auto;
+      font-family: 'Inter', sans-serif;
+      color: #222;
+      text-align: left;
+    }
+    .preview-card h1 {
+      color: #c1003b;
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+    .preview-card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 8px #f8bfc933;
+    }
+    .preview-card .content {
+      margin-top: 18px;
+      font-size: 17px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Đăng bài viết mới</h1>
+    <div class="github-token-box">
+      <label for="githubToken">GitHub Personal Access Token:</label>
+      <input id="githubToken" type="password" placeholder="Nhập GitHub token...">
+      <small>Token cần có quyền repo để upload file</small>
+    </div>
+    <input id="title" type="text" placeholder="Tiêu đề bài viết...">
+    <div class="upload-box">
+      <p>Thêm ảnh đại diện<br><small>Hoặc kéo và thả</small></p>
+      <input type="file" id="thumbnailInput" accept="image/*">
+      <img id="preview-img" />
+    </div>
+    <div class="toolbar">
+      <div id="toolbar"></div>
+    </div>
+    <div id="editor"></div>
+    <div class="actions">
+      <span id="wordCount">Bài viết 0 chữ</span>
+      <div>
+        <button class="btn" onclick="previewPost()">Xem nháp</button>
+        <button class="btn" onclick="saveDraft()" disabled>Lưu nháp</button>
+        <button class="btn" onclick="submitPost()">Đăng</button>
+      </div>
+    </div>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+  <script>
+    const REPO_OWNER = 'khetcompany';
+    const REPO_NAME = 'khet';
+    const BRANCH = 'main';
+    let uploadedThumbnailURL = '';
+    const quill = new Quill('#editor', {
+      modules: {
+        toolbar: [
+          [{ header: [1, 2, false] }],
+          ['bold', 'italic', 'underline'],
+          [{ list: 'ordered' }, { list: 'bullet' }],
+          ['link', 'image']
+        ]
+      },
+      theme: 'snow'
+    });
+    quill.on('text-change', function () {
+      const text = quill.getText().trim();
+      document.getElementById('wordCount').innerText = `Bài viết ${text.length} chữ`;
+    });
+    // Toast notification
+    function showToast(msg, duration = 2500) {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), duration);
+    }
+    // Upload ảnh đại diện
+    document.getElementById("thumbnailInput").addEventListener("change", async function () {
+      const file = this.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onloadend = async function () {
+        const base64 = reader.result.split(',')[1];
+        const path = `post/img-post/thumb-${Date.now()}-${file.name}`;
+        const githubToken = document.getElementById('githubToken').value.trim();
+        if (!githubToken) {
+          showToast("❌ Vui lòng nhập GitHub token!");
+          return;
+        }
+        try {
+          showToast('Đang upload ảnh...');
+          const res = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`, {
+            method: "PUT",
+            headers: {
+              Authorization: `token ${githubToken}`,
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              message: `Add thumbnail image: ${file.name}`,
+              content: base64,
+              branch: BRANCH
+            })
+          });
+          if (res.ok) {
+            const data = await res.json();
+            uploadedThumbnailURL = data.content.download_url;
+            document.getElementById("preview-img").src = uploadedThumbnailURL;
+            showToast('🎉 Upload ảnh thành công!');
+          } else {
+            const errorData = await res.json();
+            showToast(`❌ Lỗi upload ảnh: ${errorData.message || 'Không xác định'}`);
+          }
+        } catch (error) {
+          showToast(`❌ Lỗi kết nối khi upload ảnh: ${error.message}`);
+        }
+      };
+      reader.readAsDataURL(file);
+    });
+    function previewPost() {
+      const newWin = window.open('', '_blank');
+      const title = document.getElementById("title").value;
+      const html = `
+        <html><head><title>Xem nháp: ${title}</title>
+        <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap' rel='stylesheet'>
+        <style>body{background:#f8fafd;font-family:'Inter',sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;}.preview-card{background:#fff;border-radius:16px;box-shadow:0 4px 24px #f8bfc955;padding:32px 24px;max-width:600px;margin:32px auto;font-family:'Inter',sans-serif;color:#222;text-align:left;}h1{color:#c1003b;font-size:28px;font-weight:800;margin-bottom:18px;}img{max-width:100%;border-radius:10px;margin-bottom:18px;box-shadow:0 2px 8px #f8bfc933;}.content{margin-top:18px;font-size:17px;color:#333;}</style></head><body><div class='preview-card'>
+        <h1>${title}</h1>
+        ${uploadedThumbnailURL ? `<img src="${uploadedThumbnailURL}">` : ""}
+        <div class='content'>${quill.root.innerHTML}</div>
+        </div></body></html>
+      `;
+      newWin.document.write(html);
+    }
+    function saveDraft() {
+      showToast("Chức năng lưu nháp chưa được triển khai.");
+    }
+    async function submitPost() {
+      const title = document.getElementById("title").value.trim();
+      const content = quill.root.innerHTML;
+      if (!title) {
+        showToast("❌ Vui lòng nhập tiêu đề bài viết!");
+        return;
+      }
+      if (!content || content.trim() === '<p><br></p>') {
+        showToast("❌ Vui lòng nhập nội dung bài viết!");
+        return;
+      }
+      const slug = title.toLowerCase().replace(/\s+/g, "-").replace(/[^\w\-]/g, "");
+      const htmlContent = `
+<!DOCTYPE html>
+<html lang=\"vi\">
+<head>
+  <meta charset=\"UTF-8\">
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+  <title>${title}</title>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap' rel='stylesheet'>
+  <style>body{background:#f8fafd;font-family:'Inter',sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;}.preview-card{background:#fff;border-radius:16px;box-shadow:0 4px 24px #f8bfc955;padding:32px 24px;max-width:600px;margin:32px auto;font-family:'Inter',sans-serif;color:#222;text-align:left;}h1{color:#c1003b;font-size:28px;font-weight:800;margin-bottom:18px;}img{max-width:100%;border-radius:10px;margin-bottom:18px;box-shadow:0 2px 8px #f8bfc933;}.content{margin-top:18px;font-size:17px;color:#333;}</style>
+</head>
+<body><div class='preview-card'>
+  <h1>${title}</h1>
+  ${uploadedThumbnailURL ? `<img src=\"${uploadedThumbnailURL}\" alt=\"${title}\">` : ""}
+  <div class='content'>
+    ${content}
+  </div>
+  </div>
+</body>
+</html>`.trim();
+      const githubToken = document.getElementById('githubToken').value.trim();
+      if (!githubToken) {
+        showToast("❌ Vui lòng nhập GitHub token!");
+        return;
+      }
+      if (htmlContent.includes(githubToken) || content.includes(githubToken)) {
+        showToast("❌ Lỗi bảo mật: Token không được phép xuất hiện trong nội dung bài viết!");
+        return;
+      }
+      const base64 = btoa(unescape(encodeURIComponent(htmlContent)));
+      try {
+        showToast('Đang đăng bài...');
+        const res = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/post/${slug}.html`, {
+          method: "PUT",
+          headers: {
+            Authorization: `token ${githubToken}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            message: `Add blog post: ${title}`,
+            content: base64,
+            branch: BRANCH
+          })
+        });
+        if (res.ok) {
+          showToast("🎉 Đăng bài thành công!");
+          document.getElementById('githubToken').value = '';
+          setTimeout(() => location.reload(), 1200);
+        } else {
+          const errorData = await res.json();
+          showToast(`❌ Lỗi khi đăng bài: ${errorData.message || 'Không xác định'}`);
+        }
+      } catch (error) {
+        showToast(`❌ Lỗi kết nối: ${error.message}`);
+      }
+    }
+  </script>
+</body>
+</html>

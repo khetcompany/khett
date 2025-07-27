@@ -1,0 +1,2362 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khet Entertainment</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DC17GCGY2Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DC17GCGY2Y');
+</script>
+    <meta name="description" content="Khet Entertainment - Kết nối giới trẻ với giải trí, showbiz, âm nhạc, phim ảnh.">
+    <meta name="keywords" content="Khet Entertainment, giải trí, showbiz, âm nhạc, phim ảnh, Khet News, Khet Music">
+    <link rel="canonical" href="https://khetentertainment.com/">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Khet Entertainment - Truyền thông & Giải trí">
+    <meta property="og:description" content="Khet Entertainment - Kết nối giới trẻ với giải trí, showbiz, âm nhạc, phim ảnh.">
+    <meta property="og:url" content="https://khetentertainment.com/">
+    <meta property="og:image" content="https://khetentertainment.com/media/thumnel.jpg">
+    <meta property="og:site_name" content="Khet Entertainment">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Khet Entertainment - Truyền thông & Giải trí">
+    <meta name="twitter:description" content="Khet Entertainment - Kết nối giới trẻ với giải trí, showbiz, âm nhạc, phim ảnh.">
+    <meta name="twitter:image" content="khetentertainment.com/thumnel.jpg">
+    <script src="https://cdn.tailwindcss.com?v=1.1"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <style>
+        /* Custom CSS for finer control and overrides */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff; /* Pure white background */
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+            position: relative;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        /* Modern background pattern overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(248, 191, 201, 0.02) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(248, 191, 201, 0.02) 0%, transparent 50%),
+                linear-gradient(45deg, transparent 48%, rgba(248, 191, 201, 0.01) 50%, transparent 52%);
+            background-size: 100px 100px, 150px 150px, 20px 20px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Subtle grid pattern for modern look */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(248, 191, 201, 0.005) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(248, 191, 201, 0.005) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: -1;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        /* Floating particles effect */
+        .floating-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(248, 191, 201, 0.06);
+            border-radius: 50%;
+            animation: float-particle 15s infinite linear;
+        }
+
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 2s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 4s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 6s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 8s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 10s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 12s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 14s; }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Custom scrollbar for a sleeker look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f8bfc9;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e5738a;
+        }
+
+        /* Hero section specific styling for background image and overlay */
+        .hero-section {
+            background: linear-gradient(135deg, #fff 0%, #f8bfc9 60%, #ffe0b2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content-area {
+            position: relative;
+            z-index: 10; /* Ensure text and image are above background elements */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            padding: 0 2rem; /* Add some padding */
+        }
+
+        .hero-text-container {
+            max-width: 50%; /* Adjust width for text content */
+            color: #333;
+            padding-right: 2rem; /* Space between text and image */
+        }
+
+        .hero-image-container {
+            position: relative; /* For positioning icons relative to image */
+            width: 50%; /* Adjust width for image content */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Center the image vertically */
+            height: 100%; /* Take full height of hero section */
+        }
+
+        .hero-main-image {
+            max-height: 85%;
+            max-width: 90%;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 32px #c1003b33) drop-shadow(0 2px 8px #ffe0b2cc);
+            transition: transform 0.7s cubic-bezier(0.4,0,0.2,1), filter 0.7s;
+        }
+
+        /* Styles for small floating icons */
+        .floating-icon {
+            position: absolute;
+            background-color: rgba(248, 191, 201, 0.1);
+            border-radius: 50%;
+            padding: 0.75rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f8bfc9;
+            box-shadow: 0 4px 15px rgba(248, 191, 201, 0.2);
+            backdrop-filter: blur(5px);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-icon.icon-1 { top: 15%; left: 10%; animation-delay: 0s; }
+        .floating-icon.icon-2 { top: 40%; left: 5%; animation-delay: 0.5s; }
+        .floating-icon.icon-3 { top: 20%; right: 10%; animation-delay: 1s; }
+        .floating-icon.icon-4 { bottom: 20%; right: 5%; animation-delay: 1.5s; }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Custom styling for stats to ensure consistent height */
+        .stats-card {
+            min-height: 180px; /* Ensure cards have a minimum height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Ensure images scale correctly within their containers */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* General section padding */
+        .section-padding {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        /* Line clamp utilities for text truncation */
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Blog post card styles */
+        .blog-post-card, .col, .stats-card, .team-member, .contact, .bg-white\/70, .bg-white\/80 {
+            border-radius: 2.5rem !important;
+            box-shadow: 0 12px 40px 0 rgba(193,0,59,0.14), 0 2px 12px 0 rgba(255,224,178,0.12);
+            background: rgba(255,255,255,0.80);
+            backdrop-filter: blur(12px);
+            transition: all 0.5s cubic-bezier(0.4,0,0.2,1), box-shadow 0.5s;
+        }
+        .blog-post-card:hover, .col:hover, .stats-card:hover, .team-member:hover, .contact:hover, .bg-white\/70:hover, .bg-white\/80:hover {
+            transform: scale(1.08) rotate(-1.5deg);
+            box-shadow: 0 24px 64px 0 rgba(193,0,59,0.22), 0 4px 24px 0 rgba(255,224,178,0.22);
+            z-index: 3;
+        }
+        .blog-post-card .post-thumbnail, .col img, .team-member img, .contact img {
+            border-radius: 1.5rem !important;
+            box-shadow: 0 4px 16px 0 rgba(193,0,59,0.10);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .blog-post-card:hover .post-thumbnail, .col:hover img, .team-member:hover img, .contact:hover img {
+            box-shadow: 0 8px 32px 0 rgba(193,0,59,0.18);
+            transform: scale(1.06) rotate(1deg);
+        }
+        .col .w-16, .col .w-14, .col .w-12, .col .w-8, .col .w-32, .team-member .w-32, .team-member .w-16, .team-member .w-12 {
+            background: linear-gradient(135deg, #f8bfc9 0%, #ffe0b2 100%);
+            box-shadow: 0 2px 8px #c1003b22;
+            border-radius: 1.5rem !important;
+        }
+        .col i, .team-member i, .stats-card i, .contact i {
+            transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+        }
+        .col:hover i, .team-member:hover i, .stats-card:hover i, .contact:hover i {
+            color: #c1003b;
+            text-shadow: 0 0 8px #ffe0b2, 0 0 16px #c1003b44;
+            transform: scale(1.15) rotate(-6deg);
+        }
+
+        /* Responsive adjustments for hero section */
+        @media (max-width: 768px) {
+            .hero-content-area {
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                padding: 1rem 0.2rem;
+                height: auto;
+                min-height: 100vh;
+                gap: 1.2rem;
+            }
+            .hero-text-container {
+                max-width: 100%;
+                padding-right: 0;
+                margin-bottom: 0;
+                order: 2;
+                padding: 0 0.2rem;
+            }
+            .hero-text-container h1 {
+                font-size: 1.3rem;
+                line-height: 1.2;
+                margin-bottom: 0.7rem;
+            }
+            .hero-text-container p {
+                font-size: 1.05rem;
+                line-height: 1.5;
+                margin-bottom: 0.7rem;
+            }
+            .animated-gradient-text {
+                font-size: 1.2rem;
+                margin-top: 0.3rem;
+            }
+            .hero-image-container {
+                width: 100%;
+                height: 32vh;
+                align-items: center;
+                order: 1;
+                margin-top: 0.7rem;
+                margin-bottom: 0.2rem;
+            }
+            .hero-main-image {
+                max-height: 90%;
+                max-width: 80%;
+                object-fit: contain;
+            }
+            .floating-icon {
+                display: none;
+            }
+            .hero-text-container .flex {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: center;
+            }
+            .hero-text-container .flex a {
+                width: 100%;
+                max-width: 180px;
+                justify-content: center;
+                padding: 0.6rem 1rem;
+                font-size: 1.1rem;
+            }
+            #blog h2 {
+                font-size: 1.2rem;
+            }
+            .blog-post-card {
+                padding: 1rem 0.5rem;
+                border-radius: 1.2rem !important;
+            }
+            .blog-post-card h3 {
+                font-size: 1.1rem;
+            }
+            .blog-post-card p, .blog-post-card span {
+                font-size: 1.05rem;
+            }
+            #blog-posts-container {
+                grid-template-columns: 1fr !important;
+                gap: 1.2rem !important;
+            }
+            .section-padding {
+                padding-top: 1.2rem;
+                padding-bottom: 1.2rem;
+            }
+            .stats-card, .col, .team-member, .contact {
+                min-height: 100px;
+                padding: 0.7rem;
+            }
+            .stats-card .text-2xl, .col .text-2xl, .col .text-3xl, .col .text-4xl, .team-member .text-2xl, .team-member .text-3xl, .team-member .text-4xl, .contact .text-2xl, .contact .text-3xl, .contact .text-4xl {
+                font-size: 1.1rem !important;
+            }
+            .col h3, .team-member h3 {
+                font-size: 1.1rem;
+            }
+            .col p, .team-member p {
+                font-size: 1.05rem;
+            }
+            .team-member .w-32, .team-member .h-32 {
+                width: 60px !important;
+                height: 60px !important;
+                border-radius: 50% !important;
+                box-shadow: 0 0 0 4px #f8bfc9, 0 8px 32px 0 rgba(193,0,59,0.10);
+                transition: box-shadow 0.3s, transform 0.3s;
+            }
+            .team-member:hover .w-32, .team-member:hover .h-32 {
+                box-shadow: 0 0 0 8px #ffe0b2, 0 16px 48px 0 rgba(193,0,59,0.18);
+                transform: scale(1.08) rotate(2deg);
+            }
+            #partners .grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.2rem !important;
+            }
+            footer {
+                font-size: 0.95rem;
+                padding: 1.2rem 0;
+            }
+            #contact input, #contact textarea {
+                font-size: 1.05rem;
+                padding: 0.7rem 0.7rem 0.7rem 1.2rem;
+            }
+            #contact button {
+                font-size: 1.1rem;
+                padding: 0.7rem 0;
+                border-radius: 1.2rem !important;
+                box-shadow: 0 2px 8px 0 rgba(193,0,59,0.10);
+            }
+            #contact button:hover {
+                transform: scale(1.04) translateY(-2px);
+                box-shadow: 0 6px 24px 0 rgba(193,0,59,0.18);
+            }
+            .header-bottom .text-lg, .header-bottom .text-xl, .header-bottom .text-2xl, .header-bottom .text-3xl, .header-bottom .text-4xl,
+            nav .text-lg, nav .text-xl, nav .text-2xl, nav .text-3xl, nav .text-4xl,
+            .hero-text-container i, .hero-image-container i, .blog-post-card i, .col i, .team-member i, .contact i {
+                font-size: 1.1rem !important;
+            }
+            /* Menu mobile tối ưu */
+            #mobile-menu {
+                padding-top: 60px;
+                font-size: 1.2rem;
+                background: rgba(255,255,255,0.98);
+                backdrop-filter: blur(16px);
+            }
+            #mobile-menu nav a {
+                padding: 1rem 0;
+                border-bottom: 1px solid #f8bfc9;
+                width: 100vw;
+                text-align: center;
+                font-weight: 700;
+                color: #c1003b;
+                transition: background 0.2s, color 0.2s;
+            }
+            #mobile-menu nav a:hover {
+                background: #ffe0b2;
+                color: #c1003b;
+            }
+            #close-mobile-menu {
+                top: 18px;
+                right: 18px;
+                font-size: 2.2rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-content-area {
+                padding: 0.1rem;
+                gap: 0.7rem;
+            }
+            .hero-text-container {
+                padding: 0 0.1rem;
+            }
+            .hero-text-container h1 {
+                font-size: 1.05rem;
+                margin-bottom: 0.5rem;
+            }
+            .hero-text-container p {
+                font-size: 0.9rem;
+                margin-bottom: 0.5rem;
+            }
+            .animated-gradient-text {
+                font-size: 0.98rem;
+            }
+            .hero-image-container {
+                height: 22vh;
+                margin-top: 0.3rem;
+                margin-bottom: 0.1rem;
+            }
+            .hero-main-image {
+                max-width: 70%;
+            }
+            .hero-text-container .flex a {
+                max-width: 120px;
+                padding: 0.4rem 0.5rem;
+                font-size: 0.95rem;
+            }
+            #blog h2 {
+                font-size: 1rem;
+            }
+            .blog-post-card h3 {
+                font-size: 0.98rem;
+            }
+            .blog-post-card p, .blog-post-card span {
+                font-size: 0.9rem;
+            }
+            .section-padding {
+                padding-top: 0.7rem;
+                padding-bottom: 0.7rem;
+            }
+            .stats-card, .col, .team-member, .contact {
+                min-height: 70px;
+                padding: 0.4rem;
+            }
+            .stats-card .text-2xl, .col .text-2xl, .col .text-3xl, .col .text-4xl, .team-member .text-2xl, .team-member .text-3xl, .team-member .text-4xl, .contact .text-2xl, .contact .text-3xl, .contact .text-4xl {
+                font-size: 0.98rem !important;
+            }
+            .col h3, .team-member h3 {
+                font-size: 0.98rem;
+            }
+            .col p, .team-member p {
+                font-size: 0.9rem;
+            }
+            .team-member .w-32, .team-member .h-32 {
+                width: 40px !important;
+                height: 40px !important;
+            }
+            #partners .grid {
+                grid-template-columns: 1fr !important;
+                gap: 0.7rem !important;
+            }
+            footer {
+                font-size: 0.85rem;
+                padding: 0.7rem 0;
+            }
+            #contact input, #contact textarea {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.4rem 0.4rem 0.7rem;
+            }
+            #contact button {
+                font-size: 0.98rem;
+                padding: 0.4rem 0;
+            }
+            .header-bottom .text-lg, .header-bottom .text-xl, .header-bottom .text-2xl, .header-bottom .text-3xl, .header-bottom .text-4xl,
+            nav .text-lg, nav .text-xl, nav .text-2xl, nav .text-3xl, nav .text-4xl,
+            .hero-text-container i, .hero-image-container i, .blog-post-card i, .col i, .team-member i, .contact i {
+                font-size: 0.98rem !important;
+            }
+        }
+        #mobile-menu {
+            transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+            will-change: transform;
+            transform: translateX(100%);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 9999 !important;
+            pointer-events: auto !important;
+        }
+        @media (min-width: 768px) {
+            #main-header {
+                padding-bottom: 0;
+            }
+            .header-top {
+                display: flex;
+            }
+            .header-bottom {
+                margin-top: 0;
+            }
+            #main-header.shrink .header-top {
+                display: none !important;
+            }
+            #main-header.shrink .header-bottom {
+                padding-top: 0.25rem;
+                padding-bottom: 0.25rem;
+                border-radius: 1.5rem;
+                box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
+            }
+            #main-header.shrink #header-logo {
+                height: 2.5rem !important;
+                max-width: 100px;
+            }
+        }
+        /* Hiệu ứng chữ gradient động cho hero */
+        .animated-gradient-text {
+            font-size: 2.2rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #f8bfc9, #ffe0b2, #c1003b 80%);
+            background-size: 200% auto;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine-gradient 3s linear infinite, glow-text 2s ease-in-out infinite alternate;
+            text-shadow: 0 2px 16px rgba(248,191,201,0.10), 0 1px 0 #fff;
+            letter-spacing: 1px;
+            display: inline-block;
+        }
+        @keyframes shine-gradient {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+        @keyframes glow-text {
+            0% { text-shadow: 0 0 8px #ffe0b2, 0 0 16px #c1003b44; }
+            100% { text-shadow: 0 0 24px #ffe0b2, 0 0 32px #c1003b88; }
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #fff 0%, #f8bfc9 60%, #ffe0b2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-main-image {
+            max-height: 85%;
+            max-width: 90%;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 32px #c1003b33) drop-shadow(0 2px 8px #ffe0b2cc);
+            transition: transform 0.7s cubic-bezier(0.4,0,0.2,1), filter 0.7s;
+        }
+        .hero-image-container:hover .hero-main-image {
+            transform: scale(1.04) translateY(-10px) rotate(-2deg);
+            filter: drop-shadow(0 16px 48px #c1003b66) drop-shadow(0 4px 16px #ffe0b2);
+        }
+        .parallax {
+            will-change: transform;
+            transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+        }
+        .cta-glow {
+            box-shadow: 0 0 24px 4px #ffe0b2cc, 0 4px 16px #c1003bcc;
+            animation: cta-glow-anim 1.5s infinite alternate, cta-glow-strong 2.5s infinite alternate;
+        }
+        @keyframes cta-glow-strong {
+            0% { box-shadow: 0 0 24px 4px #ffe0b2cc, 0 4px 16px #c1003bcc; }
+            100% { box-shadow: 0 0 48px 12px #ffe0b2cc, 0 8px 32px #c1003bcc; }
+        }
+        @media (max-width: 768px) {
+          .hero-description-text {
+            display: none !important;
+          }
+        }
+        @media (max-width: 768px) {
+          .header-top {
+              display: none !important;
+          }
+          .header-bottom {
+              padding: 0.2rem 0.5rem !important;
+              border-radius: 1rem !important;
+              min-height: 44px !important;
+          }
+          #main-header .text-3xl {
+              display: none !important; /* Ẩn chữ Entertainment */
+          }
+          #header-logo {
+              height: 2rem !important;
+              max-width: 80px !important;
+          }
+          .header-bottom .flex.items-center.gap-1 {
+              gap: 0.5rem !important;
+          }
+          .header-bottom .text-lg, .header-bottom .text-xl, .header-bottom .text-2xl {
+              font-size: 1.3rem !important;
+          }
+          nav.flex-1.flex {
+              display: none !important;
+          }
+          #mobile-menu {
+              display: flex !important;
+              z-index: 999999 !important;
+          }
+          /* Đảm bảo nút menu mobile có thể click được */
+          #mobile-menu-btn {
+              z-index: 999999 !important;
+              pointer-events: auto !important;
+              position: relative !important;
+              cursor: pointer !important;
+          }
+          #mobile-menu-btn:hover {
+              background-color: rgba(193, 0, 59, 0.1) !important;
+              border-radius: 0.5rem !important;
+          }
+        }
+        @media (max-width: 640px) {
+          #project-carousel img {
+            border-radius: 1rem;
+          }
+          #project-slide-caption {
+            font-size: 1rem;
+            padding: 0.5rem 0.2rem;
+          }
+          #project-dots span {
+            width: 10px !important;
+            height: 10px !important;
+          }
+        }
+        @media (min-width: 768px) {
+          #project-carousel img {
+            border-radius: 2rem;
+          }
+          #project-slide-caption {
+            font-size: 1.25rem;
+            padding: 1rem 0.5rem;
+          }
+          #project-dots span {
+            width: 14px !important;
+            height: 14px !important;
+          }
+        }
+        /* ... existing code ... */
+        .fab, .fas {
+            transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+        }
+        .fab:hover, .fas:hover {
+            color: #ffe0b2 !important;
+            text-shadow: 0 0 12px #c1003b, 0 0 24px #ffe0b2;
+            transform: scale(1.18) rotate(-8deg);
+        }
+        .cta-glow:hover {
+            animation: cta-glow-strong 0.7s infinite alternate;
+            filter: brightness(1.08) drop-shadow(0 0 16px #ffe0b2);
+        }
+        .blog-post-card .post-thumbnail:hover, .team-member img:hover, .col img:hover, .contact img:hover {
+            filter: brightness(1.08) drop-shadow(0 0 16px #c1003b);
+            transform: scale(1.10) rotate(2deg);
+        }
+        a.button, a.cta-glow, button.cta-glow {
+            position: relative;
+            overflow: hidden;
+        }
+        a.button::after, a.cta-glow::after, button.cta-glow::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, #ffe0b2 0%, #c1003b 100%);
+            opacity: 0.18;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s, height 0.4s;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        a.button:hover::after, a.cta-glow:hover::after, button.cta-glow:hover::after {
+            width: 220%;
+            height: 220%;
+        }
+        /* ... existing code ... */
+        .text-red-600, .hover\:text-red-600:hover, .text-red-500, .hover\:text-red-500:hover {
+            color: #c1003b !important;
+        }
+        .border-red-600, .hover\:border-red-600:hover, .border-red-500, .hover\:border-red-500:hover {
+            border-color: #c1003b !important;
+        }
+        .bg-red-600, .hover\:bg-red-600:hover, .bg-red-500, .hover\:bg-red-500:hover {
+            background-color: #c1003b !important;
+        }
+        .focus\:ring-red-500:focus, .focus\:ring-red-600:focus {
+            --tw-ring-color: #c1003b !important;
+        }
+        .text-yellow-500, .hover\:text-yellow-500:hover {
+            color: #ffe0b2 !important;
+        }
+        .bg-yellow-100, .hover\:bg-yellow-100:hover {
+            background-color: #ffe0b2 !important;
+        }
+        .border-yellow-500, .hover\:border-yellow-500:hover {
+            border-color: #ffe0b2 !important;
+        }
+        .bg-gray-900, .hover\:bg-gray-900:hover {
+            background-color: #c1003b !important;
+        }
+        .text-gray-900, .hover\:text-gray-900:hover {
+            color: #c1003b !important;
+        }
+        .border-gray-300, .hover\:border-gray-300:hover {
+            border-color: #f8bfc9 !important;
+        }
+        .bg-gray-50, .hover\:bg-gray-50:hover {
+            background-color: #f8bfc9 !important;
+        }
+        /* ... existing code ... */
+        /* Section Title Redesign */
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-align: center;
+            color: #c1003b;
+            font-family: 'Playfair Display', 'Inter', sans-serif !important;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+            padding: 0 1rem;
+            line-height: 1.1;
+            /* Bỏ gradient, animation, text-shadow, stroke */
+        }
+
+        /* Unified Beautiful Title Style - Like "Hóa Nhật Anh" */
+        .beautiful-title {
+            font-family: 'Dancing Script', cursive !important;
+            font-weight: 600;
+            font-size: 2.5rem;
+            color: #333;
+            text-align: center;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .beautiful-title:hover {
+            transform: scale(1.02);
+            text-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .beautiful-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #f8bfc9, #c1003b, #ffe0b2);
+            border-radius: 2px;
+        }
+
+        /* Responsive adjustments for beautiful titles */
+        @media (max-width: 768px) {
+            .beautiful-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .beautiful-title {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* Responsive adjustments for beautiful titles */
+        @media (max-width: 768px) {
+            .beautiful-title {
+                font-size: 2rem;
+            }
+            .beautiful-title-alt {
+                font-size: 2.2rem;
+            }
+            .elegant-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .beautiful-title {
+                font-size: 1.6rem;
+            }
+            .beautiful-title-alt {
+                font-size: 1.8rem;
+            }
+            .elegant-title {
+                font-size: 1.5rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1rem;
+                padding: 0 0.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 0.9rem;
+                padding: 0 0.2rem;
+            }
+        }
+        .section-title-bar {
+            display: block;
+            width: 80px;
+            height: 6px;
+            margin: 0.5rem auto 1.5rem auto;
+            border-radius: 3px;
+            background: linear-gradient(90deg, #ffe0b2 0%, #c1003b 100%);
+            box-shadow: 0 2px 8px #c1003b33;
+        }
+        @media (max-width: 768px) {
+            .section-title-bar {
+                width: 48px;
+                height: 4px;
+            }
+        }
+        @media (max-width: 480px) {
+            .section-title-bar {
+                width: 32px;
+                height: 3px;
+            }
+        }
+        /* ... existing code ... */
+        /* --- ĐỒNG BỘ HÓA STYLE TOÀN TRANG --- */
+        /* Card, box, nút, input đều border-radius lớn, shadow, màu sắc đồng bộ */
+        .card, .box, .blog-post-card, .col, .stats-card, .team-member, .contact, .bg-white\/70, .bg-white\/80, .rounded-2xl, .rounded-xl, .rounded-3xl, .rounded-full {
+            border-radius: 2.5rem !important;
+            box-shadow: 0 12px 40px 0 rgba(193,0,59,0.14), 0 2px 12px 0 rgba(255,224,178,0.12);
+            background: rgba(255,255,255,0.80);
+            backdrop-filter: blur(12px);
+            transition: all 0.5s cubic-bezier(0.4,0,0.2,1), box-shadow 0.5s;
+        }
+        .card:hover, .box:hover, .blog-post-card:hover, .col:hover, .stats-card:hover, .team-member:hover, .contact:hover, .bg-white\/70:hover, .bg-white\/80:hover {
+            transform: scale(1.08) rotate(-1.5deg);
+            box-shadow: 0 24px 64px 0 rgba(193,0,59,0.22), 0 4px 24px 0 rgba(255,224,178,0.22);
+            z-index: 3;
+        }
+        input, textarea, button, .form-control {
+            border-radius: 1.2rem !important;
+            box-shadow: 0 2px 8px 0 rgba(193,0,59,0.10);
+            font-family: 'Inter', sans-serif;
+        }
+        input:focus, textarea:focus, button:focus {
+            outline: none;
+            border-color: #c1003b;
+            box-shadow: 0 0 0 2px #ffe0b2, 0 2px 8px 0 rgba(193,0,59,0.18);
+        }
+        /* Nút đồng bộ màu, hiệu ứng */
+        .button, .cta-glow, button, a.cta-glow, a.button {
+            background: linear-gradient(90deg, #f8bfc9 0%, #ffe0b2 100%);
+            color: #c1003b;
+            border: 2px solid #c1003b;
+            font-weight: 700;
+            border-radius: 1.2rem !important;
+            box-shadow: 0 2px 8px 0 rgba(193,0,59,0.10);
+            transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+        .button:hover, .cta-glow:hover, button:hover, a.cta-glow:hover, a.button:hover {
+            background: #c1003b !important;
+            color: #fff !important;
+            box-shadow: 0 6px 24px 0 rgba(193,0,59,0.18);
+            transform: scale(1.04) translateY(-2px);
+        }
+        /* Font chữ toàn trang */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, button, input, textarea {
+            font-family: 'Inter', sans-serif !important;
+        }
+        /* Màu chữ đồng bộ */
+        h1, h2, h3, h4, h5, h6, .section-title {
+            color: #c1003b !important;
+            font-weight: 900;
+        }
+        p, span, a, li, .text-gray-600, .text-gray-700, .text-gray-900 {
+            color: #333 !important;
+        }
+        /* Hiệu ứng hover cho icon */
+        .fab, .fas, .fa, .icon {
+            transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+        }
+        .fab:hover, .fas:hover, .fa:hover, .icon:hover {
+            color: #ffe0b2 !important;
+            text-shadow: 0 0 12px #c1003b, 0 0 24px #ffe0b2;
+            transform: scale(1.18) rotate(-8deg);
+        }
+        /* Khoảng cách section đồng bộ */
+        .section-padding {
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+        }
+        @media (max-width: 768px) {
+            .section-padding {
+                padding-top: 1.2rem !important;
+                padding-bottom: 1.2rem !important;
+            }
+        }
+        /* Responsive card/grid đồng bộ */
+        .grid, .grid-cols-1, .grid-cols-2, .grid-cols-3, .grid-cols-4 {
+            gap: 1.5rem !important;
+        }
+        @media (max-width: 768px) {
+            .grid, .grid-cols-1, .grid-cols-2, .grid-cols-3, .grid-cols-4 {
+                gap: 0.7rem !important;
+            }
+        }
+        /* ... existing code ... */
+        /* Header mobile dropdown solution */
+        @media (max-width: 768px) {
+          #main-header { display: none !important; }
+          .mobile-header { 
+            display: block !important; 
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            z-index: 999999 !important;
+          }
+          body {
+            padding-top: 80px !important;
+          }
+          .hero-section {
+            min-height: calc(100vh - 80px) !important;
+            padding-top: 0 !important;
+          }
+        }
+        @media (min-width: 769px) {
+          .mobile-header { display: none !important; }
+        }
+        .mobile-header nav {
+          transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+          overflow: hidden;
+          background: #ffffff;
+          box-shadow: 0 8px 32px rgba(193,0,59,0.15);
+          border-radius: 0 0 1.5rem 1.5rem;
+          border: 1px solid rgba(193,0,59,0.1);
+          border-top: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          z-index: 999998;
+        }
+        .mobile-header a {
+          color: #c1003b;
+          font-weight: 700;
+          padding: 1rem 1.5rem;
+          display: block;
+          border-bottom: 1px solid #f8bfc9;
+          text-decoration: none;
+          transition: background 0.2s, color 0.2s;
+        }
+        .mobile-header a:last-child { border-bottom: none; }
+        .mobile-header a:hover {
+          background: #ffe0b2;
+          color: #c1003b;
+        }
+        .mobile-header .mobile-header-bar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.7rem 1.2rem;
+          background: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          box-shadow: 0 4px 20px rgba(193,0,59,0.15);
+          border-radius: 0 0 1.5rem 1.5rem;
+          border: 1px solid rgba(193,0,59,0.1);
+          transition: all 0.3s ease;
+        }
+        .mobile-header.scrolled .mobile-header-bar {
+          background: rgba(255, 255, 255, 0.98);
+          box-shadow: 0 8px 32px rgba(193,0,59,0.2);
+          border-radius: 0;
+        }
+        .mobile-header .mobile-logo-container {
+          transition: all 0.3s ease;
+        }
+        .mobile-header.scrolled .mobile-logo-container {
+          transform: scale(0.9);
+        }
+        .mobile-header .mobile-actions {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        .mobile-header .search-btn {
+          background: rgba(193,0,59,0.1);
+          color: #c1003b;
+          border: none;
+          border-radius: 50%;
+          width: 2.5rem;
+          height: 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+          cursor: pointer;
+        }
+        .mobile-header .search-btn:hover {
+          background: #c1003b;
+          color: white;
+          transform: scale(1.1);
+        }
+        .mobile-header .search-btn i {
+          font-size: 1rem;
+        }
+        .mobile-header .mobile-action-btn {
+          display: flex;
+          align-items: center;
+          gap: 0.3rem;
+          padding: 0.4rem 0.8rem;
+          text-decoration: none;
+          border-radius: 0.5rem;
+          font-size: 0.8rem;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          box-shadow: 0 2px 8px rgba(193,0,59,0.2);
+        }
+        .mobile-header .fanpage-btn {
+          background: #c1003b;
+          color: white;
+        }
+        .mobile-header .fanpage-btn:hover {
+          background: #a00030;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 16px rgba(193,0,59,0.3);
+        }
+        .mobile-header .contact-btn {
+          background: white;
+          color: #c1003b;
+          border: 2px solid #c1003b;
+        }
+        .mobile-header .contact-btn:hover {
+          background: #c1003b;
+          color: white;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 16px rgba(193,0,59,0.3);
+        }
+                 .mobile-header .mobile-action-btn:active {
+           transform: translateY(0);
+         }
+        .mobile-header .mobile-action-btn i {
+          font-size: 0.9rem;
+        }
+        .mobile-header .mobile-action-btn span {
+          display: none;
+        }
+        @media (min-width: 480px) {
+          .mobile-header .mobile-action-btn span {
+            display: inline;
+          }
+        }
+        .mobile-header .logo {
+          height: 2.2rem;
+          transition: all 0.3s ease;
+          filter: drop-shadow(0 2px 8px rgba(193,0,59,0.2));
+        }
+        .mobile-header .logo:hover {
+          transform: scale(1.05);
+          filter: drop-shadow(0 4px 16px rgba(193,0,59,0.3));
+        }
+        .mobile-header .menu-btn {
+          font-size: 2rem;
+          color: #c1003b;
+          background: none;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          position: relative;
+          overflow: hidden;
+        }
+        .mobile-header .menu-btn:hover {
+          background: linear-gradient(135deg, #ffe0b2, #f8bfc9);
+          color: #c1003b;
+          transform: scale(1.1);
+          box-shadow: 0 4px 12px rgba(193, 0, 59, 0.2);
+        }
+        .mobile-header .menu-btn:active {
+          transform: scale(0.95);
+        }
+        .mobile-header .menu-btn::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 0;
+          height: 0;
+          background: radial-gradient(circle, #ffe0b2 0%, #c1003b 100%);
+          opacity: 0.3;
+          transform: translate(-50%, -50%);
+          transition: width 0.4s, height 0.4s;
+          border-radius: 50%;
+          z-index: -1;
+        }
+        .mobile-header .menu-btn:hover::before {
+          width: 200%;
+          height: 200%;
+        }
+        .mobile-header .menu-btn i {
+          transition: transform 0.3s ease;
+        }
+        .mobile-header .menu-btn:hover i {
+          transform: rotate(90deg);
+        }
+        .mobile-header .menu-btn.active {
+          background: linear-gradient(135deg, #c1003b, #ff6a00);
+          color: white;
+          box-shadow: 0 6px 20px rgba(193, 0, 59, 0.3);
+        }
+        .mobile-header .menu-btn.active i {
+          transform: rotate(180deg);
+        }
+        .mobile-header nav a {
+          color: #c1003b;
+          font-weight: 700;
+          padding: 1.2rem 1.5rem;
+          display: flex;
+          align-items: center;
+          gap: 0.8rem;
+          border-bottom: 1px solid rgba(193,0,59,0.1);
+          text-decoration: none;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+        }
+        .mobile-header nav a i {
+          width: 1.2rem;
+          text-align: center;
+          font-size: 1.1rem;
+          transition: all 0.3s ease;
+        }
+        .mobile-header nav a:hover i {
+          transform: scale(1.2) rotate(5deg);
+          color: #ff6a00;
+        }
+        .mobile-header nav a:last-child { border-bottom: none; }
+        .mobile-header nav a:hover {
+          background: linear-gradient(135deg, #ffe0b2, #f8bfc9);
+          color: #c1003b;
+          transform: translateX(5px);
+          box-shadow: inset 4px 0 0 #c1003b;
+        }
+        .mobile-header nav a::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0;
+          height: 100%;
+          background: linear-gradient(90deg, #c1003b, #ff6a00);
+          transition: width 0.3s ease;
+          z-index: -1;
+        }
+        .mobile-header nav a:hover::before {
+          width: 100%;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Khet Entertainment",
+      "url": "https://khetentertainment.com/",
+      "logo": "https://khetentertainment.com/media/logoc.png",
+      "description": "Khet Entertainment - Nền tảng truyền thông số hàng đầu, kết nối giới trẻ với nghệ thuật, giải trí, showbiz, âm nhạc, phim ảnh, cập nhật xu hướng mới nhất.",
+      "sameAs": [
+        "https://www.facebook.com/khetentertainment",
+        "https://www.youtube.com/@khet_news",
+        "https://www.tiktok.com/@khetmusic_"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "VN"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Hoàng Đức"
+      },
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+84-899864943",
+        "contactType": "customer service",
+        "areaServed": "VN",
+        "availableLanguage": ["Vietnamese", "English"]
+      }],
+      "email": "khetnews@gmail.com"
+    }
+    </script>
+</head>
+<body class="antialiased">
+    <div id="particles-js" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-2;"></div>
+
+    <!-- Mobile Header Dropdown (only on mobile) -->
+    <header class="mobile-header" style="display:none;">
+      <div class="mobile-header-bar">
+        <div class="mobile-logo-container">
+          <img src="media/logoc.png" alt="Khet Entertainment Logo" class="logo">
+        </div>
+        <div class="mobile-actions">
+          <a href="https://www.facebook.com/khetentertainment" class="mobile-action-btn fanpage-btn">
+            <i class="fab fa-facebook-f"></i>
+            <span>Fanpage</span>
+          </a>
+          <a href="mailto:khetnews@gmail.com" class="mobile-action-btn contact-btn">
+            <i class="fas fa-phone"></i>
+            <span>Liên hệ</span>
+          </a>
+          <button id="mobile-menu-btn" class="menu-btn" aria-label="Mở menu di động">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-dropdown" class="hidden flex-col w-full">
+        <a href="#about"><i class="fas fa-info-circle"></i> Giới Thiệu</a>
+        <a href="#qlns"><i class="fas fa-user"></i>NGHỆ SĨ</a>
+        <a href="#ecosystem"><i class="fas fa-layer-group"></i>KÊNH NỔI BẬT</a>
+        <a href="#achievements"><i class="fas fa-trophy"></i> KẾ HOẠCH</a>
+        <a href="#partners"><i class="fas fa-share-alt"></i> KÊNH</a>
+        <a href="#team"><i class="fas fa-users"></i>THÀNH VIÊN</a>
+        <a href="mailto:khetnews@gmail.com"><i class="fas fa-envelope"></i> LIÊN HỆ</a>
+      </nav>
+    </header>
+
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl shadow-lg transition-all duration-300 ease-in-out rounded-b-2xl border-b border-white/20">
+        <div class="container mx-auto flex flex-col md:space-y-0 md:flex-col">
+            <div class="header-top hidden md:flex justify-between items-center py-3 px-4 md:px-8 lg:px-12 transition-all duration-300">
+                <div class="flex items-center space-x-3">
+                    <img id="header-logo" src="https://placehold.co/140x50/c1003b/ffffff?text=KHET" alt="Khet Entertainment Logo - Nền tảng truyền thông số, giải trí, showbiz, âm nhạc, phim ảnh" class="h-12 md:h-14 lg:h-16 transition-all duration-300 rounded-md shadow-sm">
+                    <span class="text-3xl font-extrabold text-[#c1003b] tracking-tight hidden md:inline-block">Entertainment </span>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <div class="flex items-center space-x-2">
+                        <span class="border border-[#c1003b] rounded-full p-2"><i class="fas fa-envelope text-[#c1003b]"></i></span>
+                        <div class="flex flex-col text-left">
+                            <span class="font-bold text-base">Email Khet </span>
+                            <span class="text-sm">khetnews@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="border border-[#c1003b] rounded-full p-2"><i class="fas fa-phone text-[#c1003b]"></i></span>
+                        <div class="flex flex-col text-left">
+                            <span class="font-bold text-base">Zalo Phone</span>
+                            <span class="text-sm"> 0899864943</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom flex flex-row items-center justify-between py-2 px-2 sm:px-4 md:px-8 lg:px-12 bg-white rounded-full shadow-md transition-all duration-300 gap-2 sm:gap-4 md:gap-8">
+                <!-- Hamburger menu button (mobile only) -->
+                <button id="mobile-menu-btn" class="md:hidden flex items-center px-2 py-2 text-[#c1003b] focus:outline-none" aria-label="Mở menu di động">
+                  <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+                </button>
+                <nav class="flex-1 flex justify-center overflow-x-auto whitespace-nowrap gap-x-2 sm:gap-x-4 md:gap-x-8 hidden md:flex">
+                    <a href="#about" class="text-gray-800 hover:text-red-600 font-semibold text-xs sm:text-sm md:text-base tracking-wide transition-colors duration-200 px-1 sm:px-2">Giới Thiệu</a>
+                    <a href="#qlns" class="text-gray-800 hover:text-red-600 font-semibold text-xs sm:text-sm md:text-base tracking-wide transition-colors duration-200 px-1 sm:px-2">NGHỆ SĨ</a>
+                    <a href="#ecosystem" class="text-gray-800 hover:text-red-600 font-semibold text-xs sm:text-sm md:text-base tracking-wide transition-colors duration-200 px-1 sm:px-2">KÊNH NỔI BẬT</a>
+                    <a href="#partners" class="text-gray-800 hover:text-red-600 font-semibold text-xs sm:text-sm md:text-base tracking-wide transition-colors duration-200 px-1 sm:px-2">KÊNH</a>
+                    <a href="#team" class="text-gray-800 hover:text-red-600 font-semibold text-xs sm:text-sm md:text-base tracking-wide transition-colors duration-200 px-1 sm:px-2">THÀNH VIÊN</a>
+                    <a href="mailto:khetnews@gmail.com" class="text-gray-800 hover:text-red-600 font-semibold text-xs sm:text-sm md:text-base tracking-wide transition-colors duration-200 px-1 sm:px-2">LIÊN HỆ</a>
+                </nav>
+                <div class="flex items-center gap-1 sm:gap-2 md:gap-4">
+                    <a href="https://www.facebook.com/khetentertainment" class="inline-flex items-center gap-1 sm:gap-2 bg-[#c1003b] text-white px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-lg font-semibold text-xs sm:text-sm md:text-base hover:bg-[#a00030] transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                        <span class="hidden sm:inline">Fanpage</span>
+                        <i class="fab fa-facebook-f text-xs sm:text-sm md:text-base"></i>
+                    </a>
+                    <a href="mailto:khetnews@gmail.com" class="inline-flex items-center gap-1 sm:gap-2 border-2 border-[#c1003b] text-[#c1003b] px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-lg font-semibold text-xs sm:text-sm md:text-base hover:bg-[#c1003b] hover:text-white transition-all duration-300">
+                        <i class="fas fa-phone text-xs sm:text-sm md:text-base"></i>
+                        <span class="hidden sm:inline">Liên hệ</span>
+                    </a>
+                    <span class="w-px h-6 bg-gray-300 mx-1 sm:mx-2"></span>
+                    <span class="text-lg sm:text-xl md:text-2xl"><img src="media/logoc.png" alt="Khet Entertainment - Logo chính thức" class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 rounded-full object-cover"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile menu overlay -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white z-[9999] flex flex-col items-center justify-start pt-20 transition-transform duration-300 transform translate-x-full md:hidden" style="pointer-events: auto;">
+      <button id="close-mobile-menu" class="absolute top-4 right-4 text-3xl text-[#c1003b]" aria-label="Đóng menu di động"><i class="fas fa-times" aria-hidden="true"></i></button>
+      <nav class="flex flex-col gap-6 mt-8 w-full items-center">
+        <a href="#about" class="text-gray-800 font-bold text-lg">Giới Thiệu</a>
+        <a href="#qlns" class="text-gray-800 font-bold text-lg">NGHỆ SĨ</a>
+        <a href="#ecosystem" class="text-gray-800 font-bold text-lg">KÊNH NỔI BẬT</a>
+        <a href="#partners" class="text-gray-800 font-bold text-lg">KÊNH</a>
+        <a href="#team" class="text-gray-800 font-bold text-lg">THÀNH VIÊN</a>
+        <a href="mailto:khetnews@gmail.com" class="text-gray-800 font-bold text-lg">LIÊN HỆ</a>
+        <a href="https://www.facebook.com/khetentertainment" class="bg-[#c1003b] text-white px-6 py-2 rounded-lg font-semibold mt-4">Fanpage</a>
+        <a href="mailto:khetnews@gmail.com" class="border-2 border-[#c1003b] text-[#c1003b] px-6 py-2 rounded-lg font-semibold mt-2"><i class="fas fa-phone"></i> Liên hệ</a>
+      </nav>
+    </div>
+    <section class="hero-section h-screen flex items-center justify-center text-white overflow-hidden animate__animated animate__fadeInDown" data-aos="fade-down" data-aos-delay="100">
+        <div class="container mx-auto max-w-7xl h-full hero-content-area">
+            <div class="hero-text-container" data-aos="fade-right" data-aos-delay="200">
+                <p class="text-red-500 text-lg font-semibold mb-3 flex items-center animate-pulse">
+                    <i class="fas fa-gem mr-2" aria-hidden="true"></i> Khet Entertainment
+                </p>
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold leading-tight tracking-tight mb-6 drop-shadow-lg">
+                    <span id="typed-headline" class="animated-gradient-text"></span>
+                </h1>
+                <div class="flex flex-wrap gap-4 mt-8">
+                    <a href="#about"
+                       class="inline-flex items-center gap-2 px-8 py-3 rounded-xl font-bold text-lg shadow-md transition-all duration-300
+                              bg-white text-[#c1003b] border-2 border-[#c1003b] hover:bg-[#c1003b] hover:text-white hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#c1003b]/20 cta-glow">
+                        <i class="fas fa-rocket"></i>
+                        Khám phá
+                    </a>
+                    <a href="mailto:khetnews@gmail.com"
+                       class="inline-flex items-center gap-2 px-8 py-3 rounded-xl font-bold text-lg shadow-lg transition-all duration-300
+                              border-2 border-[#c1003b] text-[#c1003b] bg-white hover:bg-[#c1003b] hover:text-white hover:scale-105
+                              focus:outline-none focus:ring-4 focus:ring-[#c1003b]/30 cta-glow">
+                        <i class="fas fa-phone"></i>
+                        Liên hệ
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image-container parallax" data-aos="fade-left" data-aos-delay="400">
+                <img src="media/page1/thumnel-page1.png" alt="Khet Entertainment Team - Truyền thông số, giải trí, showbiz, âm nhạc, phim ảnh" class="hero-main-image object-cover">
+
+                <div class="floating-icon icon-1 text-2xl md:text-3xl lg:text-4xl" style="top: 15%; left: 10%;">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <div class="floating-icon icon-2 text-2xl md:text-3xl lg:text-4xl" style="top: 40%; left: 5%;">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <div class="floating-icon icon-3 text-2xl md:text-3xl lg:text-4xl" style="top: 20%; right: 10%;">
+                    <i class="fas fa-gem" style="color: #c1003b;"></i>
+                </div>
+                <div class="floating-icon icon-4 text-2xl md:text-3xl lg:text-4xl" style="bottom: 20%; right: 5%;">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sóng SVG chuyển cảnh -->
+    <div style="margin-top:-2px;line-height:0;">
+      <svg viewBox="0 0 1440 100" width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#f8bfc9" fill-opacity="0.18" d="M0,64L48,58.7C96,53,192,43,288,53.3C384,64,480,96,576,101.3C672,107,768,85,864,80C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+      </svg>
+    </div>
+    <!-- About Us Section (New section as per nav) -->
+    <section class="section-padding px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-gray-50/50 to-white animate__animated animate__fadeInUp" id="about" data-aos="fade-up" data-aos-delay="200">
+        <div class="container mx-auto max-w-7xl">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="beautiful-title">
+                    Nâng tầm Giá trị<span style="color: #c1003b;"></span> Giải trí cùng Khet Entertainment
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Khet Entertainment - Nền tảng truyền thông số hàng đầu, kết nối giới trẻ với thế giới nghệ thuật đầy sáng tạo và năng động
+                </p>
+            </div>
+            <!-- Main Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Left: Visual Content -->
+                <div class="relative" data-aos="fade-right">
+                    <!-- Main Image Container -->
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-[#c1003b]/20 to-[#ff6a00]/20 rounded-3xl blur-xl"></div>
+                        <div class="relative bg-white rounded-3xl p-8 shadow-2xl border border-[#c1003b]/10">
+                            <img src="media/page2/thumnel-page2.png" alt="Khet Entertainment Team - Đội ngũ truyền thông số, giải trí, showbiz, âm nhạc, phim ảnh" class="w-full h-auto rounded-2xl shadow-lg">
+                            
+                            <!-- Floating Stats Cards -->
+                            <div class="absolute -top-6 -right-6 bg-white rounded-2xl shadow-xl p-4 border border-[#c1003b]/10">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 bg-[#c1003b]/10 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-users text-[#c1003b] text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-gray-900">100K+</div>
+                                        <div class="text-sm text-gray-600">Theo dõi</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 border border-[#c1003b]/10">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 bg-[#c1003b]/10 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-play text-[#c1003b] text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-gray-900">10+</div>
+                                        <div class="text-sm text-gray-600">Kênh TikTok</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right: Content -->
+                <div class="space-y-8" data-aos="fade-left">
+                    <!-- Company Overview -->
+                    <div class="bg-white/80 backdrop-blur-lg rounded-2xl p-8 shadow-xl border border-[#c1003b]/10">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-[#c1003b] to-[#ff6a00] rounded-2xl flex items-center justify-center">
+                                <i class="fas fa-building text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Tổng quan công ty</h3>
+                                <p class="text-gray-600">Chào mừng đến với chúng tôi </p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Khet Entertainment là nền tảng truyền thông số chuyên nghiệp, hướng tới giới trẻ năng động, yêu thích nghệ thuật và cập nhật xu hướng. Chúng tôi mang lại trải nghiệm giải trí đa dạng, chất lượng cao.
+                        </p>
+                    </div>
+
+                    <!-- Key Information Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Lĩnh vực hoạt động -->
+                        <div class="bg-white/80 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-[#c1003b]/10 hover:scale-105 transition-all duration-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-[#c1003b]/10 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-film text-[#c1003b] text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-900">Lĩnh vực hoạt động</h4>
+                            </div>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-[#c1003b] text-sm"></i>
+                                    <span>Phim ảnh, Âm nhạc, Showbiz</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-[#c1003b] text-sm"></i>
+                                    <span>Giới trẻ, Thương hiệu, Đời sống</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-[#c1003b] text-sm"></i>
+                                    <span>Ngôi sao, Beauty Queen</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Nền tảng xã hội -->
+                        <div class="bg-white/80 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-[#c1003b]/10 hover:scale-105 transition-all duration-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-[#c1003b]/10 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-share-alt text-[#c1003b] text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-900">Nền tảng xã hội</h4>
+                            </div>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center gap-2">
+                                    <i class="fab fa-facebook text-[#c1003b]"></i>
+                                    <span><b>Khet Entertainment</b> (Page chính)</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fab fa-youtube text-[#c1003b]"></i>
+                                    <span><b>Khet News</b> (~100K followers)</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fab fa-tiktok text-[#c1003b]"></i>
+                                    <span>10 kênh TikTok (lớn nhất ~800K)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="bg-gradient-to-r from-[#c1003b]/10 to-[#ff6a00]/10 rounded-2xl p-6 border border-[#c1003b]/20">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-[#c1003b] rounded-xl flex items-center justify-center">
+                                <i class="fas fa-phone text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Liên hệ quảng cáo</h4>
+                                <p class="text-gray-600">Mr. Khánh - Chuyên viên kinh doanh</p>
+                            </div>
+                        </div>
+                        <a href="tel:0899864943" class="inline-flex items-center gap-3 bg-[#c1003b] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#a00030] transition-all duration-300 shadow-lg">
+                            <i class="fas fa-phone"></i>
+                            <span>0899 864 943</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Quản lý nghệ sĩ Section -->
+    <section class="section-padding px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-sm animate__animated animate__fadeInUp" id="qlns" data-aos="fade-up" data-aos-delay="250">
+      <div class="container mx-auto w-full px-0">
+        <h2 class="beautiful-title text-center mb-8" data-aos="zoom-in">
+          <span class="inline-block bg-[#c1003b]/10 text-[#c1003b] p-2 rounded-full"><i class="fas fa-user"></i></span> Quản lý nghệ sĩ
+        </h2>
+        <!-- Slider nghệ sĩ bắt đầu -->
+        <div class="relative w-full">
+          <button id="qlns-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-[#c1003b] text-white rounded-full p-4 shadow-lg hover:bg-[#a00030] transition z-10 text-2xl lg:text-3xl">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div id="qlns-carousel" class="overflow-hidden w-full">
+            <div id="qlns-slides" class="flex transition-transform duration-500 gap-6 md:gap-10 lg:gap-14">
+              <!-- 14 ảnh nghệ sĩ -->
+              <div class="aspect-w-16 aspect-h-9 w-full flex-shrink-0 flex items-center justify-center">
+                <img src="media/QLNS/QLNS (1).png" alt="Nghệ sĩ 1" class="w-full h-full object-cover rounded-3xl shadow-2xl transition-transform duration-300 hover:scale-105" />
+              </div>
+              <div class="aspect-w-16 aspect-h-9 w-full flex-shrink-0 flex items-center justify-center">
+                <img src="media/QLNS/QLNS (2).png" alt="Nghệ sĩ 2" class="w-full h-full object-cover rounded-3xl shadow-2xl transition-transform duration-300 hover:scale-105" />
+              </div>
+              <div class="aspect-w-16 aspect-h-9 w-full flex-shrink-0 flex items-center justify-center">
+                <img src="media/QLNS/QLNS (3).png" alt="Nghệ sĩ 3" class="w-full h-full object-cover rounded-3xl shadow-2xl transition-transform duration-300 hover:scale-105" />
+              </div>
+              <div class="aspect-w-16 aspect-h-9 w-full flex-shrink-0 flex items-center justify-center">
+                <img src="media/QLNS/QLNS (4).png" alt="Nghệ sĩ 4" class="w-full h-full object-cover rounded-3xl shadow-2xl transition-transform duration-300 hover:scale-105" />
+              </div>
+              <div class="aspect-w-16 aspect-h-9 w-full flex-shrink-0 flex items-center justify-center">
+                <img src="media/QLNS/QLNS (5).png" alt="Nghệ sĩ 5" class="w-full h-full object-cover rounded-3xl shadow-2xl transition-transform duration-300 hover:scale-105" />
+              </div>
+              <div class="aspect-w-16 aspect-h-9 w-full flex-shrink-0 flex items-center justify-center">
+                <img src="media/QLNS/QLNS (6).png" alt="Nghệ sĩ 6" class="w-full h-full object-cover rounded-3xl shadow-2xl transition-transform duration-300 hover:scale-105" />
+              </div>
+              <div class="aspect-w-16 aspect-h-9 w-full flex-shrink-0 flex items-center justify-center">
+                <img src="media/QLNS/QLNS (7).png" alt="Nghệ sĩ 7" class="w-full h-full object-cover rounded-3xl shadow-2xl transition-transform duration-300 hover:scale-105" />
+              </div>
+              <div class="aspect-w-16 aspect-h-9 w-full flex-shrink-0 flex items-center justify-center">
+                <img src="media/QLNS/QLNS (8).png" alt="Nghệ sĩ 8" class="w-full h-full object-cover rounded-3xl shadow-2xl transition-transform duration-300 hover:scale-105" />
+              </div>
+              <div class="aspect-w-16 aspect-h-9 w-full flex-shrink-0 flex items-center justify-center">
+                <img src="media/QLNS/QLNS (9).png" alt="Nghệ sĩ 9" class="w-full h-full object-cover rounded-3xl shadow-2xl transition-transform duration-300 hover:scale-105" />
+              </div>
+              <div class="aspect-w-16 aspect-h-9 w-full flex-shrink-0 flex items-center justify-center">
+                <img src="media/QLNS/QLNS (10).png" alt="Nghệ sĩ 10" class="w-full h-full object-cover rounded-3xl shadow-2xl transition-transform duration-300 hover:scale-105" />
+              </div>
+              <div class="aspect-w-16 aspect-h-9 w-full flex-shrink-0 flex items-center justify-center">
+                <img src="media/QLNS/QLNS (11).png" alt="Nghệ sĩ 11" class="w-full h-full object-cover rounded-3xl shadow-2xl transition-transform duration-300 hover:scale-105" />
+              </div>
+              <div class="aspect-w-16 aspect-h-9 w-full flex-shrink-0 flex items-center justify-center">
+                <img src="media/QLNS/QLNS (12).png" alt="Nghệ sĩ 12" class="w-full h-full object-cover rounded-3xl shadow-2xl transition-transform duration-300 hover:scale-105" />
+              </div>
+              <div class="aspect-w-16 aspect-h-9 w-full flex-shrink-0 flex items-center justify-center">
+                <img src="media/QLNS/QLNS (13).png" alt="Nghệ sĩ 13" class="w-full h-full object-cover rounded-3xl shadow-2xl transition-transform duration-300 hover:scale-105" />
+              </div>
+              <div class="aspect-w-16 aspect-h-9 w-full flex-shrink-0 flex items-center justify-center">
+                <img src="media/QLNS/QLNS (14).png" alt="Nghệ sĩ 14" class="w-full h-full object-cover rounded-3xl shadow-2xl transition-transform duration-300 hover:scale-105" />
+              </div>
+            </div>
+          </div>
+          <button id="qlns-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-[#c1003b] text-white rounded-full p-4 shadow-lg hover:bg-[#a00030] transition z-10 text-2xl lg:text-3xl">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <style>
+          #qlns-carousel {
+            width: 100%;
+            overflow: hidden;
+          }
+          #qlns-slides {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+            will-change: transform;
+          }
+          #qlns-slides > div {
+            min-width: 50%;
+            max-width: 50%;
+            box-sizing: border-box;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          @media (max-width: 1024px) {
+            #qlns-slides > div {
+              min-width: 100vw;
+              max-width: 100vw;
+            }
+          }
+          @media (max-width: 768px) {
+            #qlns-prev, #qlns-next {
+              p-4: p-2;
+              text-2xl: text-xl;
+            }
+            #qlns-slides {
+              gap: 4px;
+            }
+          }
+        </style>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const slidesContainer = document.getElementById('qlns-slides');
+          const slides = slidesContainer.querySelectorAll('div');
+          function getVisibleCount() {
+            return window.innerWidth <= 768 ? 1 : 2;
+          }
+          function getSlideWidth() {
+            return slides[0].offsetWidth;
+          }
+          let currentIndex = 0;
+          function showSlides(index) {
+            const visibleCount = getVisibleCount();
+            const maxIndex = slides.length - visibleCount;
+            if (index < 0) index = 0;
+            if (index > maxIndex) index = maxIndex;
+            slidesContainer.style.transform = `translateX(-${index * getSlideWidth()}px)`;
+            currentIndex = index;
+          }
+          document.getElementById('qlns-prev').onclick = function() {
+            showSlides(currentIndex - getVisibleCount());
+          };
+          document.getElementById('qlns-next').onclick = function() {
+            showSlides(currentIndex + getVisibleCount());
+          };
+          window.addEventListener('resize', function() {
+            showSlides(currentIndex);
+          });
+          showSlides(0);
+        });
+        </script>
+        <!-- Slider nghệ sĩ kết thúc -->
+      </div>
+    </section>
+    <!-- Ecosystem Section - Reverted to non-collapsible -->
+    <section class="section-padding px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-sm animate__animated animate__fadeInUp" id="ecosystem" data-aos="fade-up" data-aos-delay="400">
+        <div class="container mx-auto max-w-7xl">
+            <h2 class="beautiful-title" data-aos="zoom-in">
+                <span class="inline-block bg-[#c1003b]/10 text-[#c1003b] p-2 rounded-full"><i class="fas fa-layer-group"></i></span> Các kênh nổi bật
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Khet News -->
+                <a href="https://www.facebook.com/khetnews" class="col" data-aos="fade-up">
+                    <div class="bg-white/70 backdrop-blur-lg rounded-2xl shadow-xl p-8 flex flex-col items-center justify-center h-full border border-[#c1003b]/10 hover:scale-105 transition-all duration-300 group">
+                        <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#f8bfc9]/30 border border-[#c1003b]/20 shadow">
+                          <img src="media/page4/khetnews.jpg" alt="logo" class="w-8 h-8 rounded-full object-cover">
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Khet News</h3>
+                        <p class="text-base text-gray-600 mb-2 text-center">Kênh tin tức & giải trí: sự kiện, phim ảnh, beauty queen, âm nhạc.</p>
+                        <div class="flex items-center gap-2 text-[#c1003b] font-semibold text-lg mt-2"><i class="fas fa-users"></i> ~100.000 theo dõi</div>
+                    </div>
+                </a>
+                <!-- Card 2: Khet Music -->
+                <a href="https://www.tiktok.com/@khetmusic_" class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white/70 backdrop-blur-lg rounded-2xl shadow-xl p-8 flex flex-col items-center justify-center h-full border border-[#c1003b]/10 hover:scale-105 transition-all duration-300 group">
+                        <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#f8bfc9]/30 border border-[#c1003b]/20 shadow">
+                          <img src="media/page4/khetmusic.jpg" alt="logo" class="w-8 h-8 rounded-full object-cover">
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Khet Music</h3>
+                        <p class="text-base text-gray-600 mb-2 text-center">Kênh nhạc số trending: KPOP, USUK, Vbiz, không voice, sự kiện âm nhạc.</p>
+                        <div class="flex items-center gap-2 text-[#c1003b] font-semibold text-lg mt-2"><i class="fab fa-tiktok"></i> 10 kênh TikTok (lớn nhất ~800.000 theo dõi)</div>
+                    </div>
+                </a>
+                <!-- Card 3: Khet Showbiz -->
+                <a href="https://www.tiktok.com/@tintucshowbiz_24h" class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white/70 backdrop-blur-lg rounded-2xl shadow-xl p-8 flex flex-col items-center justify-center h-full border border-[#c1003b]/10 hover:scale-105 transition-all duration-300 group">
+                        <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#f8bfc9]/30 border border-[#c1003b]/20 shadow">
+                          <img src="media/page4/khetshowbiz.jpg" alt="logo" class="w-8 h-8 rounded-full object-cover">
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Khet Showbiz</h3>
+                        <p class="text-base text-gray-600 mb-2 text-center">Kênh tin tức Showbiz 24h.</p>
+                        <div class="flex items-center gap-2 text-[#c1003b] font-semibold text-lg mt-2"><i class="fas fa-bolt"></i> Nội dung trending</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section - Reverted to non-collapsible -->
+    <section class="section-padding px-4 sm:px-6 lg:px-8 bg-white/80 backdrop-blur-sm animate__animated animate__fadeInUp" id="achievements" data-aos="fade-up" data-aos-delay="500">
+        <div class="container mx-auto max-w-7xl">
+            <h2 class="beautiful-title" data-aos="zoom-in">
+                <span class="inline-block bg-[#c1003b]/10 text-[#c1003b] p-2 rounded-full"><i class="fas fa-rocket"></i></span> Các dự án<span style="color: #c1003b;"></span>
+            </h2>
+            <!-- Dự án 1 -->
+            <!-- ... XÓA TOÀN BỘ GRID CŨ CỦA DỰ ÁN ... -->
+            <div class="relative w-full max-w-5xl mx-auto">
+              <button id="project-prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-[#c1003b] text-white rounded-full p-3 shadow-lg hover:bg-[#a00030] transition z-10">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div id="project-carousel" class="overflow-hidden">
+                <div id="project-slides" class="flex transition-transform duration-500 gap-8">
+                  <!-- Dự án 1 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (1).jpg" alt="Dự án 1" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                  <!-- Dự án 2 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (2).jpg" alt="Dự án 2" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                  <!-- Dự án 3 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (3).jpg" alt="Dự án 3" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                  <!-- Dự án 4 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (4).jpg" alt="Dự án 4" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                  <!-- Dự án 5 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (5).jpg" alt="Dự án 5" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                  <!-- Dự án 6 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (6).jpg" alt="Dự án 6" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                  <!-- Dự án 7 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (7).jpg" alt="Dự án 7" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                  <!-- Dự án 8 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (8).jpg" alt="Dự án 8" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                  <!-- Dự án 9 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (9).jpg" alt="Dự án 9" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                  <!-- Dự án 10 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (10).jpg" alt="Dự án 10" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                  <!-- Dự án 11 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (11).jpg" alt="Dự án 11" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                  <!-- Dự án 12 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (12).jpg" alt="Dự án 12" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                  <!-- Dự án 13 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (13).jpg" alt="Dự án 13" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                  <!-- Dự án 14 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (14).jpg" alt="Dự án 14" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                  <!-- Dự án 15 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (15).jpg" alt="Dự án 15" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                  <!-- Dự án 16 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (16).jpg" alt="Dự án 16" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                  <!-- Dự án 17 -->
+                  <div class="w-64 flex-shrink-0 flex flex-col items-center">
+                    <img src="media/proj/pj (17).jpg" alt="Dự án 17" class="w-full rounded-xl mb-4 object-contain">
+                  </div>
+                </div>
+              </div>
+              <button id="project-next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-[#c1003b] text-white rounded-full p-3 shadow-lg hover:bg-[#a00030] transition z-10">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+            <style>
+              #project-carousel {
+                width: 100%;
+                overflow: hidden;
+              }
+              #project-slides {
+                display: flex;
+                transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+                will-change: transform;
+              }
+              #project-slides > div {
+                min-width: 256px;
+                max-width: 256px;
+                box-sizing: border-box;
+              }
+              @media (max-width: 900px) {
+                #project-slides > div {
+                  min-width: 180px;
+                  max-width: 180px;
+                }
+              }
+            </style>
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const slidesContainer = document.getElementById('project-slides');
+              const slides = slidesContainer.querySelectorAll('div');
+              function getSlideWidth() {
+                return slides[0].offsetWidth + 32; // 32 = gap-8 (2rem)
+              }
+              function getVisibleCount() {
+                return Math.floor(document.getElementById('project-carousel').offsetWidth / getSlideWidth());
+              }
+              let currentIndex = 0;
+
+              function showSlides(index) {
+                const visibleCount = getVisibleCount();
+                const maxIndex = slides.length - visibleCount;
+                if (index < 0) index = 0;
+                if (index > maxIndex) index = maxIndex;
+                slidesContainer.style.transform = `translateX(-${index * getSlideWidth()}px)`;
+                currentIndex = index;
+              }
+
+              document.getElementById('project-prev').onclick = function() {
+                showSlides(currentIndex - getVisibleCount());
+              };
+              document.getElementById('project-next').onclick = function() {
+                showSlides(currentIndex + getVisibleCount());
+              };
+
+              window.addEventListener('resize', function() {
+                showSlides(currentIndex);
+              });
+
+              showSlides(0);
+            });
+            </script>
+            <!-- END JS SLIDER NHIỀU HÌNH -->
+            <div class="text-center mt-6" id="show-more-projects-btn-wrap">
+                <button id="show-more-projects-btn" class="inline-flex items-center px-8 py-3 bg-[#c1003b] text-white font-bold text-lg rounded-xl hover:bg-[#a00030] transition-all duration-300 shadow-lg">
+                    Xem thêm dự án
+                    <i class="fas fa-chevron-down ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section - Reverted to non-collapsible -->
+    <section class="section-padding px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-sm animate__animated animate__fadeInUp" id="partners" data-aos="fade-up" data-aos-delay="600">
+        <div class="container mx-auto max-w-7xl">
+            <h2 class="beautiful-title" data-aos="zoom-in">
+                <span class="inline-block bg-[#c1003b]/10 text-[#c1003b] p-2 rounded-full"><img src="media/logoc.png" alt="Khet Entertainment Logo" class="w-6 h-6 inline-block"></span> Hệ Thống kênh<span style="color: #c1003b;"></span> của Khet Entertainment
+            </h2>
+            
+            <!-- Channel Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-6 mb-12">
+                <!-- Page Khet News (100k) -->
+                <div class="bg-white/70 backdrop-blur-lg rounded-xl md:rounded-2xl shadow-xl p-3 md:p-6 border border-[#c1003b]/10 hover:scale-105 transition-all duration-300 group" data-aos="fade-up">
+                    <a href="https://www.facebook.com/khetnews" class="block">
+                        <div class="flex items-center gap-2 md:gap-4 mb-2 md:mb-4">
+                            <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#f8bfc9]/30 border border-[#c1003b]/20 shadow">
+                              <img src="media/page4/khetnews.jpg" alt="logo" class="w-8 h-8 rounded-full object-cover">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-bold text-gray-900 group-hover:text-[#c1003b] transition text-xs md:text-base truncate">Page Khet News</h3>
+                                <p class="text-xs md:text-sm text-gray-600 truncate">Tin tức & Giải trí</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#c1003b] font-bold text-sm md:text-lg">100K</span>
+                            <img src="media/page6/icon-facebook.png" alt="logo" class="w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg object-cover">
+                        </div>
+                    </a>
+                </div>
+                <!-- Khet Showbiz (821k) -->
+                <div class="bg-white/70 backdrop-blur-lg rounded-xl md:rounded-2xl shadow-xl p-3 md:p-6 border border-[#c1003b]/10 hover:scale-105 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                    <a href="https://www.tiktok.com/@tintucshowbiz_24h" class="block">
+                        <div class="flex items-center gap-2 md:gap-4 mb-2 md:mb-4">
+                            <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#f8bfc9]/30 border border-[#c1003b]/20 shadow">
+                              <img src="media/page4/khetshowbiz.jpg" alt="logo" class="w-8 h-8 rounded-full object-cover">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-bold text-gray-900 group-hover:text-[#c1003b] transition text-xs md:text-base truncate">Khet Showbiz</h3>
+                                <p class="text-xs md:text-sm text-gray-600 truncate">Showbiz & Ngôi sao</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#c1003b] font-bold text-sm md:text-lg">821K</span>
+                            <img src="media/page6/icon-tiktok.png" alt="logo" class="w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg object-cover">
+                        </div>
+                    </a>
+                </div>
+                <!-- Khet News (400k) -->
+                <div class="bg-white/70 backdrop-blur-lg rounded-xl md:rounded-2xl shadow-xl p-3 md:p-6 border border-[#c1003b]/10 hover:scale-105 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://www.tiktok.com/@khetnews" class="block">
+                        <div class="flex items-center gap-2 md:gap-4 mb-2 md:mb-4">
+                            <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#f8bfc9]/30 border border-[#c1003b]/20 shadow">
+                              <img src="media/page4/khetnews.jpg" alt="logo" class="w-8 h-8 rounded-full object-cover">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-bold text-gray-900 group-hover:text-[#c1003b] transition text-xs md:text-base truncate">Khet News</h3>
+                                <p class="text-xs md:text-sm text-gray-600 truncate">Tin tức tổng hợp</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#c1003b] font-bold text-sm md:text-lg">400K</span>
+                            <img src="media/page6/icon-tiktok.png" alt="logo" class="w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg object-cover">
+                        </div>
+                    </a>
+                </div>
+                <!-- Khet Entertainment (101K) -->
+                <div class="bg-white/70 backdrop-blur-lg rounded-xl md:rounded-2xl shadow-xl p-3 md:p-6 border border-[#c1003b]/10 hover:scale-105 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                    <a href="https://www.tiktok.com/@canhbuomnews" class="block">
+                        <div class="flex items-center gap-2 md:gap-4 mb-2 md:mb-4">
+                            <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#f8bfc9]/30 border border-[#c1003b]/20 shadow">
+                              <img src="media/page4/kheteneter.jpg" alt="logo" class="w-8 h-8 rounded-full object-cover">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-bold text-gray-900 group-hover:text-[#c1003b] transition text-xs md:text-base truncate">Khet Entertainment</h3>
+                                <p class="text-xs md:text-sm text-gray-600 truncate">Giải trí & Phim ảnh</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#c1003b] font-bold text-sm md:text-lg">101K</span>
+                            <img src="media/page6/icon-tiktok.png" alt="logo" class="w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg object-cover">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Khet Sô Bồ (100k) -->
+                <div class="bg-white/70 backdrop-blur-lg rounded-xl md:rounded-2xl shadow-xl p-3 md:p-6 border border-[#c1003b]/10 hover:scale-105 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="400">
+                    <a href="https://www.tiktok.com/@khetsobosobich" class="block">
+                        <div class="flex items-center gap-2 md:gap-4 mb-2 md:mb-4">
+                            <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#f8bfc9]/30 border border-[#c1003b]/20 shadow">
+                              <img src="media/page4/khetsobo.jpg" alt="logo" class="w-8 h-8 rounded-full object-cover">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-bold text-gray-900 group-hover:text-[#c1003b] transition text-xs md:text-base truncate">Khet Sô Bồ</h3>
+                                <p class="text-xs md:text-sm text-gray-600 truncate">Gossip & Tin hot</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#c1003b] font-bold text-sm md:text-lg">100K</span>
+                            <img src="media/page6/icon-tiktok.png" alt="logo" class="w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg object-cover">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Khet Music (100k) -->
+                <div class="bg-white/70 backdrop-blur-lg rounded-xl md:rounded-2xl shadow-xl p-3 md:p-6 border border-[#c1003b]/10 hover:scale-105 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="500">
+                    <a href="https://www.tiktok.com/@khetmusic_" class="block">
+                        <div class="flex items-center gap-2 md:gap-4 mb-2 md:mb-4">
+                            <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#f8bfc9]/30 border border-[#c1003b]/20 shadow">
+                              <img src="media/page4/khetmusic.jpg" alt="logo" class="w-8 h-8 rounded-full object-cover">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-bold text-gray-900 group-hover:text-[#c1003b] transition text-xs md:text-base truncate">Khet Music</h3>
+                                <p class="text-xs md:text-sm text-gray-600 truncate">Âm nhạc & Ca sĩ</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#c1003b] font-bold text-sm md:text-lg">100K</span>
+                            <img src="media/page6/icon-tiktok.png" alt="logo" class="w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg object-cover">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gặp Sao Ngoài Đời (3k) -->
+                <div class="bg-white/70 backdrop-blur-lg rounded-xl md:rounded-2xl shadow-xl p-3 md:p-6 border border-[#c1003b]/10 hover:scale-105 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="800">
+                    <a href="https://www.tiktok.com/@gapsaongoaidoi" class="block">
+                        <div class="flex items-center gap-2 md:gap-4 mb-2 md:mb-4">
+                            <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#f8bfc9]/30 border border-[#c1003b]/20 shadow">
+                              <img src="media/page4/gapsao.jpeg" alt="logo" class="w-8 h-8 rounded-full object-cover">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-bold text-gray-900 group-hover:text-[#c1003b] transition text-xs md:text-base truncate">Gặp Sao Ngoài Đời</h3>
+                                <p class="text-xs md:text-sm text-gray-600 truncate">Gặp gỡ ngôi sao</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[#c1003b] font-bold text-sm md:text-lg">3K</span>
+                            <img src="media/page6/icon-tiktok.png" alt="logo" class="w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg object-cover">
+                        </div>
+                    </a>
+                </div>
+            </div>
+    </section>
+
+    <!-- Team Section - Reverted to non-collapsible -->
+    <section class="section-padding px-4 sm:px-6 lg:px-8 bg-white/80 backdrop-blur-sm animate__animated animate__fadeInUp" id="team" data-aos="fade-up" data-aos-delay="700">
+        <div class="container mx-auto max-w-7xl">
+            <h2 class="beautiful-title" data-aos="zoom-in">
+                <span class="inline-block bg-[#c1003b]/10 text-[#c1003b] p-2 rounded-full"><i class="fas fa-users"></i></span> <span style="color: #c1003b;"></span>Team Khet Entertainment
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
+                <!-- Team Member 1 -->
+                <div class="col text-center" data-aos="zoom-in-up">
+                    <div class="bg-white/70 backdrop-blur-lg rounded-2xl shadow-xl p-6 border-2 border-transparent hover:border-[#c1003b] transition-all duration-300 group flex flex-col items-center">
+                        <div class="w-32 h-32 rounded-full border-4 border-gradient-to-br from-[#c1003b] to-[#f8e9ef] shadow-lg mb-4 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                            <img src="media/member/bui-van-tien.jpg" alt="Thành viên Khet Entertainment" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-semibold text-xl text-gray-800 group-hover:text-[#c1003b] transition">Bùi Văn Tiến</h3>
+                        <p class="text-sm text-gray-600">Nhà sáng lập</p>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="col text-center" data-aos="flip-left" data-aos-delay="200">
+                    <div class="bg-white/70 backdrop-blur-lg rounded-2xl shadow-xl p-6 border-2 border-transparent hover:border-[#c1003b] transition-all duration-300 group flex flex-col items-center">
+                        <div class="w-32 h-32 rounded-full border-4 border-gradient-to-br from-[#c1003b] to-[#f8e9ef] shadow-lg mb-4 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                            <img src="media/member/do-khac-tam.jpg" alt="Thành viên Khet Entertainment" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-semibold text-xl text-gray-800 group-hover:text-[#c1003b] transition">Đỗ Khắc Tâm</h3>
+                        <p class="text-sm text-gray-600">Giám đốc</p>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="col text-center" data-aos="flip-right" data-aos-delay="300">
+                    <div class="bg-white/70 backdrop-blur-lg rounded-2xl shadow-xl p-6 border-2 border-transparent hover:border-[#c1003b] transition-all duration-300 group flex flex-col items-center">
+                        <div class="w-32 h-32 rounded-full border-4 border-gradient-to-br from-[#c1003b] to-[#f8e9ef] shadow-lg mb-4 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                            <img src="media/member/hoang-duc.jpg" alt="Thành viên Khet Entertainment" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-semibold text-xl text-gray-800 group-hover:text-[#c1003b] transition">Hoàng Đức</h3>
+                        <p class="text-sm text-gray-600">Giám Đốc Điều Hành</p>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="col text-center" data-aos="zoom-in-up" data-aos-delay="400">
+                    <div class="bg-white/70 backdrop-blur-lg rounded-2xl shadow-xl p-6 border-2 border-transparent hover:border-[#c1003b] transition-all duration-300 group flex flex-col items-center">
+                        <div class="w-32 h-32 rounded-full border-4 border-gradient-to-br from-[#c1003b] to-[#f8e9ef] shadow-lg mb-4 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                            <img src="https://placehold.co/128x128?text=Member" alt="Thành viên Khet Entertainment" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-semibold text-xl text-gray-800 group-hover:text-[#c1003b] transition">Nguyễn Văn A </h3>
+                        <p class="text-sm text-gray-600">Chức Vụ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Partners Company Section -->
+    <section class="section-padding px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white/90 via-[#f8bfc9]/30 to-[#ffe0b2]/40 backdrop-blur-xl animate__animated animate__fadeInUp" id="partners-company" data-aos="fade-up" data-aos-delay="750">
+      <div class="container mx-auto max-w-7xl">
+        <h2 class="beautiful-title" data-aos="zoom-in">
+          <span class="inline-block bg-[#c1003b]/10 text-[#c1003b] p-2 rounded-full"><i class="fas fa-handshake"></i></span>
+          Đối tác công ty<span style="color: #c1003b;"></span>
+        </h2>
+        <p class="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">Khet Entertainment tự hào hợp tác cùng các công ty, thương hiệu lớn trong lĩnh vực truyền thông, giải trí, công nghệ và nhiều ngành nghề khác. Chúng tôi cam kết mang lại giá trị tối ưu cho đối tác.</p>
+        
+        <!-- Đối tác chính và Call to Action cùng hàng -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <!-- Đối tác chiến lược -->
+          <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100" data-aos="fade-up">
+            <div class="text-center mb-6">
+              <h3 class="text-2xl font-bold text-[#c1003b] mb-3">Đối tác chiến lược</h3>
+              <p class="text-gray-600 text-lg">Hợp tác lâu dài, phát triển bền vững</p>
+            </div>
+            <div class="flex justify-center">
+              <img src="media/doitac/ino.jpg" alt="Đối tác chiến lược" class="w-full max-w-xs h-32 object-contain rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" />
+            </div>
+          </div>
+          
+          <!-- Call to Action -->
+          <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-center mb-6">
+              <h3 class="text-2xl font-bold text-[#c1003b] mb-3">Trở thành đối tác của chúng tôi</h3>
+              <p class="text-gray-600 mb-6">Hãy liên hệ với chúng tôi để khám phá cơ hội hợp tác và cùng phát triển trong lĩnh vực truyền thông số.</p>
+            </div>
+            <div class="flex flex-col gap-3">
+              <a href="mailto:khetnews@gmail.com" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#c1003b] text-white font-semibold rounded-lg hover:bg-[#a00030] transition-colors duration-300">
+                <i class="fas fa-envelope"></i>
+                Liên hệ hợp tác
+              </a>
+              <a href="tel:0899864943" class="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[#c1003b] text-[#c1003b] font-semibold rounded-lg hover:bg-[#c1003b] hover:text-white transition-colors duration-300">
+                <i class="fas fa-phone"></i>
+                0899 864 943
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Grid các đối tác -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-5xl mx-auto mb-12">
+          <!-- Partner 1 -->
+          <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col items-center border border-gray-100 hover:shadow-md transition-shadow duration-300" data-aos="fade-up">
+            <img src="media/doitac/bright.jpg" alt="Đối tác 1" class="w-12 h-12 object-contain mb-2">
+            <p class="text-xs text-gray-600 text-center font-medium">Bright Waves</p>
+          </div>
+          
+          <!-- Partner 2 -->
+          <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col items-center border border-gray-100 hover:shadow-md transition-shadow duration-300" data-aos="fade-up" data-aos-delay="50">
+            <img src="media/doitac/2.png" alt="Đối tác 2" class="w-12 h-12 object-contain mb-2">
+            <p class="text-xs text-gray-600 text-center font-medium">Đối tác 2</p>
+          </div>
+          
+          <!-- Partner 3 -->
+          <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col items-center border border-gray-100 hover:shadow-md transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
+            <img src="media/doitac/3.png" alt="Đối tác 3" class="w-12 h-12 object-contain mb-2">
+            <p class="text-xs text-gray-600 text-center font-medium">Đối tác 3</p>
+          </div>
+          
+          <!-- Partner 4 -->
+          <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col items-center border border-gray-100 hover:shadow-md transition-shadow duration-300" data-aos="fade-up" data-aos-delay="150">
+            <img src="media/doitac/4.png" alt="Đối tác 4" class="w-12 h-12 object-contain mb-2">
+            <p class="text-xs text-gray-600 text-center font-medium">Đối tác 4</p>
+          </div>
+          
+          <!-- Partner 5 -->
+          <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col items-center border border-gray-100 hover:shadow-md transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
+            <img src="media/doitac/5.png" alt="Đối tác 5" class="w-12 h-12 object-contain mb-2">
+            <p class="text-xs text-gray-600 text-center font-medium">Đối tác 5</p>
+          </div>
+          
+          <!-- Partner 6 -->
+          <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col items-center border border-gray-100 hover:shadow-md transition-shadow duration-300" data-aos="fade-up" data-aos-delay="250">
+            <img src="media/doitac/6.png" alt="Đối tác 6" class="w-12 h-12 object-contain mb-2">
+            <p class="text-xs text-gray-600 text-center font-medium">Đối tác 6</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section (Slideshow) -->
+    
+    <!-- Đã xóa phần Projects Section theo yêu cầu -->
+
+    <footer class="bg-gradient-to-r from-[#c1003b] via-[#ffe0b2] to-[#c1003b] text-gray-100 py-12 text-center text-base animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="900">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="mb-4">
+                <span class="text-2xl font-bold tracking-wide">Khet Entertainment</span>
+                <span class="block text-lg mt-2 font-semibold text-[#c1003b]">Kết nối giới trẻ với nghệ thuật, giải trí, showbiz, âm nhạc, phim ảnh.</span>
+            </div>
+            <p class="mb-4">&copy; 2025 Khet Entertainment. Email: <a href="mailto:khetnews@gmail.com" class="underline hover:text-white">khetnews@gmail.com</a> | Liên hệ: <a href="tel:0899864943" class="underline hover:text-white">0899864943</a></p>
+            <div class="flex justify-center space-x-6 mt-6 mb-4">
+                <a href="https://www.facebook.com/khetentertainment" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#c1003b] transition-colors duration-300"><i class="fab fa-facebook-f text-3xl" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/@khet_news" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#c1003b] transition-colors duration-300"><i class="fab fa-youtube text-3xl" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/@khetmusic_" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#c1003b] transition-colors duration-300"><i class="fab fa-tiktok text-3xl" aria-hidden="true"></i></a>
+                <a href="#" class="text-white hover:text-[#c1003b] transition-colors duration-300"><i class="fab fa-instagram text-3xl" aria-hidden="true"></i></a>
+            </div>
+            <div class="mt-4 text-sm text-gray-200 italic">"Nền tảng truyền thông số hàng đầu cho giới trẻ Việt Nam."</div>
+        </div>
+    </footer>
+
+    <!-- AOS JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Blog Loader JavaScript -->
+    <script src="js/blog-loader.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, /* Animation duration */
+            once: true,    /* Whether animation should happen only once - default */
+            mirror: false, /* Whether elements should animate out while scrolling past them */
+        });
+
+        // Optional: Smooth scroll for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add a subtle shadow to the header on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 100 && window.innerWidth >= 768) {
+                header.classList.add('shrink');
+            } else {
+                header.classList.remove('shrink');
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, /* Animation duration */
+            once: true,    /* Whether animation should happen only once - default */
+            mirror: false, /* Whether elements should animate out while scrolling past them */
+        });
+
+        // Hiệu ứng chữ động cho headline
+        document.addEventListener('DOMContentLoaded', function() {
+          if (document.getElementById('typed-headline')) {
+            new Typed('#typed-headline', {
+              strings: [
+                "Khet Entertainment - Nền tảng truyền thông số", 
+                "Giải trí, showbiz, âm nhạc, phim ảnh", 
+                "Kết nối giới trẻ với xu hướng mới"
+              ],
+              typeSpeed: 60,
+              backSpeed: 30,
+              backDelay: 1500,
+              loop: true
+            });
+          }
+        });
+
+        // Optional: Smooth scroll for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add a subtle shadow to the header on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 100 && window.innerWidth >= 768) {
+                header.classList.add('shrink');
+            } else {
+                header.classList.remove('shrink');
+            }
+        });
+    </script>
+    <script>
+        // Hiệu ứng particles.js cho background động
+        particlesJS('particles-js', {
+          "particles": {
+            "number": {"value": 60, "density": {"enable": true, "value_area": 800}},
+            "color": {"value": ["#f8bfc9", "#ffe0b2", "#c1003b"]},
+            "shape": {"type": "circle"},
+            "opacity": {"value": 0.18, "random": true},
+            "size": {"value": 6, "random": true},
+            "line_linked": {"enable": false},
+            "move": {"enable": true, "speed": 1.2, "direction": "none", "random": true, "straight": false, "out_mode": "out"}
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {"onhover": {"enable": true, "mode": "repulse"}, "onclick": {"enable": true, "mode": "push"}},
+            "modes": {"repulse": {"distance": 80, "duration": 0.4}, "push": {"particles_nb": 4}}
+          },
+          "retina_detect": true
+        });
+    </script>
+    <script>
+      // Mobile menu functionality - Single script to avoid conflicts
+      document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('mobile-menu-btn');
+        var menu = document.getElementById('mobile-menu');
+        var closeBtn = document.getElementById('close-mobile-menu');
+        
+        // Ensure menu is hidden on page load
+        if (menu) {
+          menu.classList.add('translate-x-full');
+        }
+        
+        // Add click event for mobile menu button
+        if (btn && menu) {
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            menu.classList.remove('translate-x-full');
+            console.log('Mobile menu opened'); // Debug log
+          });
+        }
+        
+        // Add click event for close button
+        if (closeBtn && menu) {
+          closeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            menu.classList.add('translate-x-full');
+            console.log('Mobile menu closed'); // Debug log
+          });
+        }
+        
+        // Close menu when clicking outside
+        if (menu) {
+          menu.addEventListener('click', function(e) {
+            if (e.target === menu) {
+              menu.classList.add('translate-x-full');
+            }
+          });
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('show-more-projects-btn');
+        if (btn) {
+          btn.addEventListener('click', function() {
+            document.querySelectorAll('.extra-project').forEach(function(el) {
+              el.classList.remove('hidden');
+            });
+            btn.parentElement.style.display = 'none';
+          });
+        }
+      });
+    </script>
+    <script>
+      // Mobile dropdown menu logic
+      document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('mobile-menu-btn');
+        var nav = document.getElementById('mobile-dropdown');
+        var mobileHeader = document.querySelector('.mobile-header');
+        var searchBtn = document.querySelector('.search-btn');
+        
+        // Menu toggle
+        if (btn && nav) {
+          btn.addEventListener('click', function() {
+            nav.classList.toggle('hidden');
+            btn.classList.toggle('active');
+          });
+          // Ẩn menu khi chọn 1 mục
+          nav.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+              nav.classList.add('hidden');
+              btn.classList.remove('active');
+            });
+          });
+        }
+        
+        // Scroll effect
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 50) {
+            mobileHeader.classList.add('scrolled');
+          } else {
+            mobileHeader.classList.remove('scrolled');
+          }
+        });
+        
+        // Search functionality
+        if (searchBtn) {
+          searchBtn.addEventListener('click', function() {
+            // Có thể thêm modal search hoặc redirect đến trang search
+            alert('Tính năng tìm kiếm sẽ được phát triển sau!');
+          });
+        }
+      });
+    </script>
+</body>
+</html>
